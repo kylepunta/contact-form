@@ -19,12 +19,43 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    Contact Us First Name This field is required Last Name This field is
-    required Email Address Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required I consent to being contacted by the team
-    To submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <form action="">
+      <h1>Contact Us</h1>
+      <div>
+        <label for="firstName">First Name <span>*</span></label>
+        <input type="text" name="firstName" id="firstName" required />
+      </div>
+      <div>
+        <label for="lastName">Last Name <span>*</span></label>
+        <input type="text" name="lastName" id="lastName" required />
+      </div>
+      <div>
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div>
+        <label for="queryType">Query Type <span>*</span></label>
+        <div>
+          <input type="radio" name="queryType" id="queryType" />
+          <label for="generalEnquiry">General Enquiry</label>
+        </div>
+        <div>
+          <input type="radio" name="queryType" id="queryType" />
+          <label for="supportRequest">Support Request</label>
+        </div>
+      </div>
+      <div>
+        <label for="message">Message <span>*</span></label>
+        <input type="text" name="message" id="message" required />
+      </div>
+      <div>
+        <input type="checkbox" name="consent" id="consent" />
+        <label for="consent"
+          >I consent to being contacted by the team <span>*</span></label
+        >
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
