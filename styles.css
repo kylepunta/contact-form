@@ -1,3 +1,27 @@
-html {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
   font-family: "Karla", sans-serif;
+}
+
+.form-container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: hsl(148, 38%, 91%);
+}
+
+form {
+  background-color: white;
 }
