@@ -9,11 +9,20 @@ const textErrorMessages = document.querySelectorAll(".error-message.text");
 const emailErrorMessage = document.querySelector(".error-message.email");
 const radioErrorMessage = document.querySelector(".error-message.radio");
 const checkboxErrorMessage = document.querySelector(".error-message.checkbox");
+const successMessage = document.querySelector(".success-message");
 
 form.addEventListener("submit", (event) => {
   form.classList.add("submitted");
   if (form.checkValidity()) {
     // form is valid
+    event.preventDefault();
+    if (successMessage.classList.contains("hidden")) {
+      successMessage.classList.remove("hidden");
+      setTimeout(() => {
+        successMessage.classList.add("hidden");
+        form.classList.remove("submitted");
+      }, 4000);
+    }
   } else {
     // form is invalid
     event.preventDefault();
