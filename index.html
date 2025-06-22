@@ -20,25 +20,28 @@
   </head>
   <body>
     <div class="form-container">
-      <form action="">
+      <form action="" novalidate>
         <h1>Contact Us</h1>
         <div class="text-field">
           <label for="firstName">First Name <span>*</span></label>
           <input type="text" name="firstName" id="firstName" required />
+          <p class="error-message text"></p>
         </div>
         <div class="text-field">
           <label for="lastName">Last Name <span>*</span></label>
           <input type="text" name="lastName" id="lastName" required />
+          <p class="error-message text"></p>
         </div>
         <div class="text-field email">
           <label for="email">Email Address <span>*</span></label>
           <input type="email" name="email" id="email" required />
+          <p class="error-message email"></p>
         </div>
         <div class="radio-section">
           <label for="queryType">Query Type <span>*</span></label>
           <div class="radio-fields">
             <div class="radio-field">
-              <input type="radio" name="queryType" id="enquiry" />
+              <input type="radio" name="queryType" id="enquiry" required />
               <label for="enquiry">General Enquiry</label>
             </div>
             <div class="radio-field">
@@ -46,16 +49,21 @@
               <label for="support">Support Request</label>
             </div>
           </div>
+          <p class="error-message radio"></p>
         </div>
         <div class="text-field message">
           <label for="message">Message <span>*</span></label>
-          <textarea name="message" id="message"></textarea>
+          <textarea name="message" id="message" required></textarea>
+          <p class="error-message text"></p>
         </div>
         <div class="check-field">
-          <input type="checkbox" name="consent" id="consent" />
-          <label for="consent"
-            >I consent to being contacted by the team <span>*</span></label
-          >
+          <div class="checkbox-message">
+            <input type="checkbox" name="consent" id="consent" required />
+            <label for="consent"
+              >I consent to being contacted by the team <span>*</span></label
+            >
+          </div>
+          <p class="error-message checkbox"></p>
         </div>
         <input type="submit" value="Submit" id="submitBtn" />
       </form>
@@ -65,5 +73,6 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Kyle Purcell</a>.
     </div> -->
+    <script src="./script.js"></script>
   </body>
 </html>
