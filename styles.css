@@ -127,11 +127,16 @@ textarea {
   accent-color: hsl(169, 82%, 27%);
 }
 
-.check-field {
+.checkbox-message {
   display: flex;
   gap: 1rem;
   align-items: center;
   margin-block: 1rem;
+}
+
+.check-field {
+  display: flex;
+  flex-direction: column;
 }
 
 #enquiry,
@@ -149,6 +154,15 @@ input:focus,
 textarea:focus {
   outline: none;
   border: 2px solid hsl(169, 82%, 27%);
+}
+
+form.submitted input:invalid,
+form.submitted textarea:invalid {
+  border: 1px solid hsl(0, 66%, 54%);
+}
+
+.error-message {
+  color: hsl(0, 66%, 54%);
 }
 
 @media (min-width: 600px) {
