@@ -165,6 +165,39 @@ form.submitted textarea:invalid {
   color: hsl(0, 66%, 54%);
 }
 
+.success-message {
+  background-color: hsl(187, 24%, 22%);
+  color: white;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 10px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 80%;
+  transition: opacity ease 0.4s;
+  opacity: 1;
+}
+
+.success-message > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-message p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.hidden {
+  transition: opacity ease 0.4s;
+  opacity: 0;
+}
+
 @media (min-width: 600px) {
   form {
     min-width: 600px;
@@ -203,5 +236,11 @@ form.submitted textarea:invalid {
   }
   textarea {
     min-height: 150px;
+  }
+  .success-message {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 0%;
   }
 }
